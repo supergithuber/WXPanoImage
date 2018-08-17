@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C711C2D72126C6F2005CE932 /* FLEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C711C2D52126C6F2005CE932 /* FLEX.framework */; };
+		C711C2D82126C6F2005CE932 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C711C2D62126C6F2005CE932 /* SnapKit.framework */; };
+		C711C2DA2126C763005CE932 /* FLEX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C711C2D52126C6F2005CE932 /* FLEX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C711C2DB2126C763005CE932 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C711C2D62126C6F2005CE932 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC6D41B1211EDFFF00EFA310 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6D41B0211EDFFF00EFA310 /* AppDelegate.m */; };
 		CC6D41B4211EE00000EFA310 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6D41B3211EE00000EFA310 /* ViewController.m */; };
 		CC6D41B7211EE00000EFA310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6D41B5211EE00000EFA310 /* Main.storyboard */; };
@@ -17,7 +21,25 @@
 		CC6D41CB212039E400EFA310 /* Room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC6D41CA212039E400EFA310 /* Room.jpg */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C711C2D92126C730005CE932 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C711C2DA2126C763005CE932 /* FLEX.framework in Embed Frameworks */,
+				C711C2DB2126C763005CE932 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C711C2CD2126C4E9005CE932 /* WXPanoImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXPanoImage-Bridging-Header.h"; sourceTree = "<group>"; };
+		C711C2D52126C6F2005CE932 /* FLEX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLEX.framework; path = Carthage/Build/iOS/FLEX.framework; sourceTree = SOURCE_ROOT; };
+		C711C2D62126C6F2005CE932 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CC6D41AC211EDFFF00EFA310 /* WXPanoImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXPanoImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6D41AF211EDFFF00EFA310 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC6D41B0211EDFFF00EFA310 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,12 +60,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C711C2D72126C6F2005CE932 /* FLEX.framework in Frameworks */,
+				C711C2D82126C6F2005CE932 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C711C2CC2126C492005CE932 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				C711C2CD2126C4E9005CE932 /* WXPanoImage-Bridging-Header.h */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		C711C2D42126C6B2005CE932 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				C711C2D52126C6F2005CE932 /* FLEX.framework */,
+				C711C2D62126C6F2005CE932 /* SnapKit.framework */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
 		CC6D41A3211EDFFF00EFA310 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +104,8 @@
 		CC6D41AE211EDFFF00EFA310 /* WXPanoImage */ = {
 			isa = PBXGroup;
 			children = (
+				C711C2D42126C6B2005CE932 /* Carthage */,
+				C711C2CC2126C492005CE932 /* Monitor */,
 				CC6D41C9212039D900EFA310 /* Files */,
 				CC6D41C5211FCE9300EFA310 /* WXPano */,
 				CC6D41AF211EDFFF00EFA310 /* AppDelegate.h */,
@@ -105,6 +148,7 @@
 				CC6D41A8211EDFFF00EFA310 /* Sources */,
 				CC6D41A9211EDFFF00EFA310 /* Frameworks */,
 				CC6D41AA211EDFFF00EFA310 /* Resources */,
+				C711C2D92126C730005CE932 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +170,7 @@
 				TargetAttributes = {
 					CC6D41AB211EDFFF00EFA310 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -309,8 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYFVDC483X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WXPanoImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,6 +369,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wu.-.WXPanoImage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WXPanoImage/Monitor/WXPanoImage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -327,8 +380,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYFVDC483X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WXPanoImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,6 +395,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wu.-.WXPanoImage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WXPanoImage/Monitor/WXPanoImage-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
